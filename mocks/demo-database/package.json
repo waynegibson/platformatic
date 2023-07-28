@@ -1,0 +1,23 @@
+{
+  "name": "demo-database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "platformatic start",
+    "clean": "rm -fr ./dist",
+    "build": "platformatic compile",
+    "migrate": "platformatic db migrations apply",
+    "configure": "cp .env.sample .env"
+  },
+  "dependencies": {
+    "platformatic": "workspace:^"
+  },
+  "devDependencies": {
+    "@platformatic/db": "workspace:^",
+    "@platformatic/sql-mapper": "workspace:0.32.0",
+    "@types/node": "^20.4.5",
+    "fastify": "4.20.0",
+    "typescript": "^5.1.6"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://platformatic.dev/schemas/v0.32.0/db",
+  "server": {
+    "hostname": "{PLT_SERVER_HOSTNAME}",
+    "port": "{PORT}",
+    "logger": {
+      "level": "{PLT_SERVER_LOGGER_LEVEL}"
+    }
+  },
+  "db": {
+    "connectionString": "{DATABASE_URL}",
+    "graphql": false,
+    "openapi": true,
+    "autoTimestamp": true
+  },
+  "migrations": {
+    "dir": "migrations"
+  },
+  "watch": {
+    "ignore": [
+      "*.sqlite",
+      "*.sqlite-journal"
+    ]
+  },
+  "plugins": {
+    "paths": [
+      "plugin.ts"
+    ],
+    "typescript": "{PLT_TYPESCRIPT}"
+  },
+  "types": {
+    "autogenerate": true
+  }
+}
